@@ -2,13 +2,27 @@ import React from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 // import Button from 'react-bootstrap/Button';
-import { Button, Alert, Breadcrumb, Card } from 'react-bootstrap';
+import { Button, Alert, Breadcrumb, Card, Form } from 'react-bootstrap';
 
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <Form >
+          <Form.Group controlId="formEmail">
+            <Form.Label>Email Address</Form.Label>
+            <Form.Control type="email" placeholder="email@email.com"/>
+            <Form.Text className="text-muted">
+              Your email is safe with us!
+            </Form.Text>
+          </Form.Group>
+          <Form.Group controlId="formPassword">
+            <Form.Label>Password</Form.Label>
+            <Form.Control type="password" placeholder="Password"/>
+          </Form.Group>
+          <Button variant="secondary" type="submit">Login</Button>
+        </Form>
         <Card className="mb-3" style={{color: 'black'}}>
           <Card.Img src="https://picsum.photos/200/100"/>
           <Card.Body>
